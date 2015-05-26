@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/codegangsta/cli"
 )
@@ -52,5 +53,5 @@ func doList(c *cli.Context) {
 		return
 	}
 
-	fmt.Println(images)
+	fmt.Println(strings.Join(images, ","))
 }

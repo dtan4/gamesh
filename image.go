@@ -8,11 +8,11 @@ import (
 
 var listImageURL = "http://tokyo-ame.jwa.or.jp/scripts/mesh_index.js"
 
-func ListImages() (string, error) {
+func ListImages() ([]string, error) {
 	resp, err := http.Get(listImageURL)
 
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
 	defer resp.Body.Close()
@@ -20,16 +20,16 @@ func ListImages() (string, error) {
 	body, err := ioutil.ReadAll(resp.Body)
 
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
-	images := strings.Replace(string(body), "Amesh.setIndexList(", "", -1)
-	images = strings.Replace(images, ");", "", -1)
-	images = strings.Replace(images, "\n", "", -1)
-	images = strings.Replace(images, "\"", "", -1)
-	images = strings.Replace(images, "[", "", -1)
-	images = strings.Replace(images, "]", "", -1)
-	images = strings.Replace(images, ",", "\n", -1)
+	substr := strings.Replace(string(body), "Amesh.setIndexList(", "", -1)
+	substr = strings.Replace(substr, ");", "", -1)
+	substr = strings.Replace(substr, "\n", "", -1)
+	substr = strings.Replace(substr, "\"", "", -1)
+	substr = strings.Replace(substr, "[", "", -1)
+	substr = strings.Replace(substr, "]", "", -1)
+	images := strings.Split(substr, ",")
 
 	return images, nil
 }
