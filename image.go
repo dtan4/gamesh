@@ -6,8 +6,10 @@ import (
 	"strings"
 )
 
+var listImageURL = "http://tokyo-ame.jwa.or.jp/scripts/mesh_index.js"
+
 func ListImages() (string, error) {
-	resp, err := http.Get("http://tokyo-ame.jwa.or.jp/scripts/mesh_index.js")
+	resp, err := http.Get(listImageURL)
 
 	if err != nil {
 		return "", err
@@ -30,5 +32,4 @@ func ListImages() (string, error) {
 	images = strings.Replace(images, ",", "\n", -1)
 
 	return images, nil
-
 }
