@@ -3,3 +3,6 @@ go:
   - 1.2
   - 1.3
   - 1.4
+notifications:
+  slack:
+    secure: mhf/PhBypAGD7cYTst9pwP22d1Z5Z5dhIu4U2WuJ+zd7BN/MjdE/xsmW+Y2/WtBxyv1/8yk4gqu4Mt0wk/AP233GFGsFXyvQrXzzt7DdOjZ291ciA/0C5IfrMqL4zJJKil2nteMXq6X4YAm2isK6DPCMtLQpW3zGDWQqQrQL3AQ=
