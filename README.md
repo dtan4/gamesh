@@ -15,7 +15,7 @@ $ go get -d github.com/Daisuke Fujita/gamesh
 
 ## Contribution
 
-1. Fork ([https://github.com/Daisuke Fujita/gamesh/fork](https://github.com/Daisuke Fujita/gamesh/fork))
+1. Fork ([https://github.com/dtan4/gamesh/fork](https://github.com/dtan4/gamesh/fork))
 1. Create a feature branch
 1. Commit your changes
 1. Rebase your local changes against the master branch
@@ -25,4 +25,4 @@ $ go get -d github.com/Daisuke Fujita/gamesh
 
 ## Author
 
-[Daisuke Fujita](https://github.com/Daisuke Fujita)
+[Daisuke Fujita (@dtan4)](https://github.com/dtan4)
