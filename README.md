@@ -1,5 +1,5 @@
-gamesh
-====
+# gamesh
+[![Build Status](https://travis-ci.org/dtan4/gamesh.svg?branch=master)](https://travis-ci.org/dtan4/gamesh)
 
 ## Description
 
