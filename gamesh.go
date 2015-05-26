@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+	newApp().Run(os.Args)
+}
+
+func newApp() *cli.App {
 	app := cli.NewApp()
 	app.Name = "gamesh"
 	app.Version = Version
@@ -15,5 +19,5 @@ func main() {
 	app.Email = "dtanshi45@gmail.com"
 	app.Commands = Commands
 
-	app.Run(os.Args)
+	return app
 }
