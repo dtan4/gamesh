@@ -4,10 +4,44 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	_ "path/filepath"
 	"testing"
 
 	c "github.com/smartystreets/goconvey/convey"
 )
+
+func TestGetImage(t *testing.T) {
+	c.Convey("Get image", t, func() {
+		c.Convey("with no argument", func() {
+			c.Convey("It should download the latest image", func() {
+
+			})
+		})
+
+		c.Convey("with valid argument", func() {
+			// path, err := GetImage("201505270535")
+
+			c.Convey("It should raise no error", func() {
+				// c.So(err, c.ShouldBeNil)
+			})
+
+			c.Convey("The path should be the downloaded path", func() {
+				// c.So(path, c.ShouldEqual, "201505270535.jpg")
+			})
+		})
+
+		c.Convey("with invalid argument", func() {
+
+			c.Convey("It should raise an error", func() {
+
+			})
+
+			c.Convey("The path should be empty", func() {
+
+			})
+		})
+	})
+}
 
 func TestListImages(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
