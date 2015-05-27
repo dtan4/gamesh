@@ -43,6 +43,14 @@ func assert(err error) {
 }
 
 func doGet(c *cli.Context) {
+	path, err := GetImage(c.Args()[0])
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println(path)
 }
 
 func doList(c *cli.Context) {
